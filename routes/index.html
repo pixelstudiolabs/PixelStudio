@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110096560-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110096560-1');
+</script>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Pixel Studio!</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
     <h1>Pixel Studio</h1>
@@ -23,6 +33,6 @@
     <h2>Design Canvas</h2>
     <table id="pixel_canvas"></table>
 
-    <script src="designs.js"></script>
+    <script src="javascripts/designs.js"></script>
 </body>
 </html>
