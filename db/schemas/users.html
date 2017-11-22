@@ -1,0 +1,43 @@
+<table border="1">
+  <caption>Table &quot;public.users&quot;</caption>
+  <tr>
+    <th align="center">Column</th>
+    <th align="center">Type</th>
+    <th align="center">Modifiers</th>
+  </tr>
+  <tr valign="top">
+    <td align="left">id</td>
+    <td align="left">integer</td>
+    <td align="left">not null default nextval('users_id_seq'::regclass)</td>
+  </tr>
+  <tr valign="top">
+    <td align="left">name</td>
+    <td align="left">text</td>
+    <td align="left">&nbsp; </td>
+  </tr>
+  <tr valign="top">
+    <td align="left">email</td>
+    <td align="left">text</td>
+    <td align="left">&nbsp; </td>
+  </tr>
+  <tr valign="top">
+    <td align="left">registration_date</td>
+    <td align="left">timestamp without time zone</td>
+    <td align="left">&nbsp; </td>
+  </tr>
+  <tr valign="top">
+    <td align="left">last_visit</td>
+    <td align="left">timestamp without time zone</td>
+    <td align="left">&nbsp; </td>
+  </tr>
+  <tr valign="top">
+    <td align="left">verified</td>
+    <td align="left">boolean</td>
+    <td align="left">&nbsp; </td>
+  </tr>
+</table>
+<p>Indexes:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&quot;users_pkey&quot; PRIMARY KEY, btree (id)<br />
+Referenced by:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;TABLE &quot;drawings&quot; CONSTRAINT &quot;drawings_user_id_fkey&quot; FOREIGN KEY (user_id) REFERENCES users(id)<br />
+</p>

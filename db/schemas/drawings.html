@@ -1,0 +1,43 @@
+<table border="1">
+  <caption>Table &quot;public.drawings&quot;</caption>
+  <tr>
+    <th align="center">Column</th>
+    <th align="center">Type</th>
+    <th align="center">Modifiers</th>
+  </tr>
+  <tr valign="top">
+    <td align="left">id</td>
+    <td align="left">integer</td>
+    <td align="left">not null default nextval('drawings_id_seq'::regclass)</td>
+  </tr>
+  <tr valign="top">
+    <td align="left">name</td>
+    <td align="left">text</td>
+    <td align="left">&nbsp; </td>
+  </tr>
+  <tr valign="top">
+    <td align="left">creation_date</td>
+    <td align="left">timestamp without time zone</td>
+    <td align="left">&nbsp; </td>
+  </tr>
+  <tr valign="top">
+    <td align="left">public</td>
+    <td align="left">boolean</td>
+    <td align="left">&nbsp; </td>
+  </tr>
+  <tr valign="top">
+    <td align="left">s3key</td>
+    <td align="left">text</td>
+    <td align="left">&nbsp; </td>
+  </tr>
+  <tr valign="top">
+    <td align="left">user_id</td>
+    <td align="left">integer</td>
+    <td align="left">not null default nextval('drawings_user_id_seq'::regclass)</td>
+  </tr>
+</table>
+<p>Indexes:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&quot;drawings_pkey&quot; PRIMARY KEY, btree (id)<br />
+Foreign-key constraints:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&quot;drawings_user_id_fkey&quot; FOREIGN KEY (user_id) REFERENCES users(id)<br />
+</p>
