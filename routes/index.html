@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110090610-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110090610-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'UA-110090610-1');
-</script>
+        gtag('config', 'UA-110090610-1');
+    </script>
 
-<!-- jquery -->
+    <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
-
-<!-- Pixel studio app -->
-<script src="javascripts/pixelstudio.js"></script>
+    <!-- Pixel studio app -->
+    <script src="javascripts/pixelstudio.js"></script>
+    <script>
+        $(init);
+    </script>
     <title>Pixel Studio!</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
+
 <body>
     <h1>Pixel Studio</h1>
     <h2>Grid Size</h2>
     <form id="sizePicker">
         Grid Height:
-        <input type="number" id="input_height" name="height" min="1" value="1">
-        Grid Width:
+        <input type="number" id="input_height" name="height" min="1" value="1"> Grid Width:
         <input type="number" id="input_width" name="width" min="1" value="1">
         <input type="submit">
     </form>
@@ -38,6 +41,7 @@
     <h2>Design Canvas</h2>
     <table id="pixel_canvas"></table>
 
-   
+
 </body>
+
 </html>
